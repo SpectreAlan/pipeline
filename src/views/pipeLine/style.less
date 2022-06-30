@@ -1,0 +1,50 @@
+.pipeLine-detail {
+    position: relative;
+    padding: 10px;
+    overflow-x: scroll;
+    border: 1px solid #e5e5e5;
+    transform: translateY(-1px);
+    user-select: none;
+
+    &::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ececed;
+        border-radius: 10px;
+    }
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .nodes {
+        position: relative;
+        height: 400px;
+
+        .node {
+            position: absolute;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 5px 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+
+        span {
+            margin-right: 5px;
+        }
+    }
+}
