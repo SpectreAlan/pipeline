@@ -39,11 +39,11 @@ const PipeLine: React.FC<IProps> = ({list}) => {
             className={style["pipeLine-detail"]}
             onWheel={(e) => handleScroll(e)}
         >
-            <ul className={style.nodes} style={{ width }}>
+            <div className={style.nodes} style={{ width }}>
                 {pipeLines.map(
                     (node) =>
                         !node.empty && (
-                            <li
+                            <span
                                 onClick={() =>{} }
                                 className={style.node}
                                 key={node.nodeId}
@@ -55,7 +55,7 @@ const PipeLine: React.FC<IProps> = ({list}) => {
                             >
                                 {node.icon}
                                 {node.nodeName}
-                            </li>
+                            </span>
                         ),
                 )}
                 <svg
@@ -74,7 +74,7 @@ const PipeLine: React.FC<IProps> = ({list}) => {
                         />
                     ))}
                 </svg>
-            </ul>
+            </div>
         </div>
     );
 };
